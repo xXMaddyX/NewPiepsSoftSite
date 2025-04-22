@@ -69,6 +69,13 @@ ul {
   justify-self: center;
 }
 
+#games {
+  padding-top: 60px;
+  width: 80%;
+  justify-self: center;
+  background-color: rgba(255, 166, 0, 0.600);
+}
+
 #pieps-logo {
   width: 150px;
   filter: drop-shadow(0px 0px 10px);
@@ -212,6 +219,10 @@ header .container {
     #about {
       width: 100%;
     }
+
+    #games {
+      width: 100%;
+    }
   }
 
   @media (max-width: 1300px) {
@@ -220,6 +231,10 @@ header .container {
     }
 
     #about {
+      width: 100%;
+    }
+
+    #games {
       width: 100%;
     }
   }

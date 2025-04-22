@@ -1,18 +1,21 @@
 import Carousell from "./components/carousell/carousell.js";
 import AboutSection from "./components/about/about.js";
 import NewsComponent from "./components/news/news.js";
+import GameComponent from "./components/games/games.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   //-------------------------->>>>DEFINE_WEB_COMPONETS<<<<---------------------
   customElements.define("carousell-element", Carousell);
   customElements.define("about-element", AboutSection);
   customElements.define("news-element", NewsComponent);
+  customElements.define("game-element", GameComponent);
   //---------------------------------------------------------------------------
 
   //------------------------->>>>ELEMENT_SELECTORS<<<<-------------------------
   const WelcomeSection = document.querySelector("#home");
   const AboutSectionCont = document.querySelector("#about");
   const NewsSection = document.querySelector("#news");
+  const GameSection = document.querySelector("#games");
   //---------------------------------------------------------------------------
 
   const CarousellElement = document.createElement("carousell-element");
@@ -21,8 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const AboutSectionElem = document.createElement("about-element");
   AboutSectionCont.append(AboutSectionElem);
 
-  const NewsSectionElem =  document.createElement("news-element");
-  NewsSection.append(NewsSectionElem)
+  const NewsSectionElem = document.createElement("news-element");
+  NewsSection.append(NewsSectionElem);
+
+  const GameSectionElem = document.createElement("game-element");
+  GameSection.append(GameSectionElem);
 
   //-------------------------->>>>NAVIGATION<<<<-------------------------------
   // Mobile menu toggle
