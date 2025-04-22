@@ -1,0 +1,95 @@
+const NewsHTML = `
+<div id="container">
+    <h1>News</h1>
+    <div class="wrapper"></div>
+</div>
+<style>
+    @font-face {
+        font-family: piepsi;
+        src: url("fonts/PermanentMarker-Regular.ttf");
+    }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 4rem;
+        color: white;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: piepsi;
+        padding-bottom: 20px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+    }
+
+    .spacer {
+        height: 2px;
+        background-color: white;
+        margin-top: 20px;
+        width: 80%;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .news-container {
+        margin-top: 20px;
+    }
+
+    .news-container h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .news-container p {
+        font-size: 1.5rem;
+    }
+
+    .news-button {
+        margin-top: 10px;
+        border-radius: 20px;
+        border: 2px solid rgb(255, 255, 255);
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-family: piepsi;
+        font-size: 1rem;
+        transition: all 1s;
+    }
+
+    .news-button:hover {
+        border: 2px solid rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+        .news-container h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .news-container p {
+            font-size: 1.0rem;
+        }
+    }
+</style>
+`
+
+export default NewsHTML;

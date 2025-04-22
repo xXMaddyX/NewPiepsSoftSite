@@ -1,0 +1,225 @@
+@font-face {
+  font-family: piepsi;
+  src: url("fonts/PermanentMarker-Regular.ttf");
+}
+
+:root {
+    --primary-color: #ffffff;
+    --primary-glow: rgba(15, 224, 255, 0.4);
+    --secondary-color: #2aff46;
+    --secondary-glow: rgba(255, 42, 109, 0.4);
+    --dark-color: #0a0a0a;
+    --dark-color-lighter: #121212;
+    --medium-dark: #1a1a1a;
+    --light-color: #f0f0f0;
+    --text-color: #fcfcfc;
+    --text-light: #d6d6d6;
+    --background-color: #050505;
+    --card-bg: #0f0f0f;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --glow-shadow: 0 0 10px var(--primary-glow);
+    --transition: all 0.3s ease;
+    --container-width: 1200px;
+    --header-height: 80px;
+    --border-radius: 4px;
+    --font-family: piepsi;
+  }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+#home {
+  padding-top: 50px;
+  width: 80%;
+  justify-self: center;
+  background-color: #050505;
+}
+
+#about {
+  padding-top: 60px;
+  width: 80%;
+  justify-self: center;
+  background-color: rgba(255, 166, 0, 0.600);
+}
+
+#news {
+  padding-top: 60px;
+  width: 80%;
+  justify-self: center;
+}
+
+#pieps-logo {
+  width: 150px;
+  filter: drop-shadow(0px 0px 10px);
+}
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: rgba(255, 200, 0, 0.600);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  transition: var(--transition);
+  border-bottom: 1px solid rgba(15, 224, 255, 0.1);
+}
+  
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-family);
+  text-shadow: 1px 1px 3px rgb(65, 65, 65);
+}
+  
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+  
+.logo span {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+  
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-right: 20px;
+  font-family: var(--font-family);
+}
+  
+  .nav-links a {
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--primary-color);
+    text-shadow: 0 0 8px var(--primary-glow);
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-glow);
+    transition: var(--transition);
+  }
+  
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+    width: 100%;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .mobile-menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: var(--transition);
+  }
+
+
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+      margin-right: 10px;
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      margin-right: 0px;
+      background-color: rgba(0, 0, 0, 0.95);
+      color: gray;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: var(--transition);
+      box-shadow: -5px 0 15px var(--shadow-color);
+      z-index: 1000;
+    }
+    
+    .nav-links.active {
+      right: 0;
+    }
+
+    #home {
+      width: 100%;
+    }
+
+    #about {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    #home {
+      width: 100%;
+    }
+
+    #about {
+      width: 100%;
+    }
+  }

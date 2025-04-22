@@ -1,0 +1,66 @@
+<div id="container">
+    <img src="img/PiepsmitTasse.png" alt="">
+    <section class="info-text">
+        <h3>Look forward to our 2D pixel art games that we develop using Phaser, Electron, JavaScript, Lua (Löve), Python (Pygame), and Godot.</h3>
+    </section>
+    <div class="spacer"></div>
+    <section class="info-text">
+        <h3>Hey, Pixel Pioneer! Ready to dive into a world where every corner bursts with creativity and every pixel tells a story? Then you’ve come to the right place! Here at Piep’s Soft, we live and breathe 2D pixel art games. Our mission? To create games that not only captivate but also pay tribute to the golden era of pixel art.</h3>
+    </section>
+</div>
+<style>
+    @font-face {
+        font-family: piepsi;
+        src: url("fonts/PermanentMarker-Regular.ttf");
+    }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: piepsi;
+    }
+
+    img {
+        width: 20%;
+        filter: drop-shadow(2px 2px 3px black);
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #last-spacer {
+        margin-bottom: 20px;
+    }
+
+    .spacer {
+        height: 2px;
+        align-self: center;
+        background-color: black;
+        width: 80%;
+    }
+
+    .info-text {
+        width: 80%;
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        text-shadow: 
+        1px 1px 2px white, 
+        -1px -1px 2px white, 
+        1px -1px 2px white,
+        -1px 1px 2px white;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+    @media (max-width: 768px) {
+        .info-text {
+            font-size: 1rem;
+        }
+    }
+
+</style>
