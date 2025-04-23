@@ -1,0 +1,85 @@
+<div id="container">
+    <h1 id="heading">TEAM</h1>
+    <h3>Our Team of Game Developer´s and Digital Artists</h3>
+    <div class="wrapper">
+        <div class="team-card" linkData="https://www.piepssoft.de/nadine/">
+            <h1>Nadine</h1>
+            <img src="img/portrait.jpg" alt="">
+            <h3>Digital Artist</h3>
+        </div>
+        <div class="team-card" linkData="https://www.piepssoft.de/sven/">
+            <h1>Sven</h1>
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV86PmNS9H0UtFkspv6DPE9h_9R-f3Qk13vzmTuyl_2nfxelUBvu_BX-_vwcKG3Ceq84ZowHiFa6yrTXAstwqstuyO7oHmKUrtOn6HvzN_w11J8I598FNaDLUc4VDjHjrN27Klrwjl9mxmpzrwDW5I53f=w598-h797-s-no-gm?authuser=0" alt="">
+            <h3>Game Designer, Programmer</h3>
+        </div>
+    </div>
+</div>
+<style>
+    @font-face {
+        font-family: piepsi;
+        src: url("fonts/PermanentMarker-Regular.ttf");
+    }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    #container {
+        font-family: piepsi;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #heading {
+        font-size: 4rem;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+
+    .team-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        border: 1px solid white;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .team-card:hover {
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        box-shadow: 1px 1px 2px rgb(255, 255, 255), 
+        -1px -1px 2px rgb(255, 255, 255), 
+        1px -1px 2px rgb(255, 255, 255),
+        -1px 1px 2px rgb(255, 255, 255);
+    }
+
+    .team-card img {
+        width: 300px;
+    }
+
+    @media (max-width: 768px) {
+        #heading {
+            font-size: 2.5rem;
+        }
+        .wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

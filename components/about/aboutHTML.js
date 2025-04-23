@@ -32,6 +32,7 @@ const AboutHTML = `
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 60px;
     }
 
     #last-spacer {
@@ -49,7 +50,7 @@ const AboutHTML = `
         width: 80%;
         text-align: center;
         margin-top: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 60px;
         text-shadow: 
         1px 1px 2px white, 
         -1px -1px 2px white, 
