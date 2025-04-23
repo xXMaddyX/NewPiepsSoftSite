@@ -8,19 +8,19 @@
             <li id="3D" class="selector-item">3D Games</li>
         </ol>
         <div class="grid-elements">
-            <div name="HTML" class="game-card active">
+            <div name="HTML" redirect="https://www.piepssoft.de/peeps-deep-dive/" class="game-card active">
                 <h2>Piep´s Deep Dive</h2>
-                <img src="" alt="">
+                <img src="img/peepsDeepDive.png" alt="">
                 <p>Help Pieps in this Sea Adventure. A demo of an WebGL Project of an Exploration Game with our mascot 'Pieps'</p>
             </div>
-            <div name="Pixel" class="game-card active">
+            <div name="Pixel" redirect="https://store.steampowered.com/app/3083010/Flaming_Trails__Lost_Ember/" class="game-card active">
                 <h2>Flaming Trails</h2>
-                <img src="" alt="">
+                <img src="img/FlamingTrails.jpg" alt="">
                 <p>Help Ember in this "Flaming" Adventure. Explore a Dark World at the end of Time.</p>
             </div>
-            <div name="HTML" class="game-card active">
+            <div name="HTML" redirect="https://www.piepssoft.de/helloween/" class="game-card active">
                 <h2>Pumpkin Mayham</h2>
-                <img src="" alt="">
+                <img src="img/halloweenImg.png" alt="">
                 <p>A smal Web Based WebGL Shooter, Shot dozens of Pumpins and Gosts. SPOOKYYYY!!!</p>
             </div>
         </div>
@@ -125,8 +125,9 @@
 
     .game-card {
         display: none;
-        min-height: 200px;
+        min-height: 350px;
         padding: 10px;
+        gap: 10px;
         border: 1px solid white;
         background-color: black;
         color: white;
@@ -160,6 +161,11 @@
         }
     }
 
+    .game-card img {
+        object-fit: contain;
+        max-width: 600px;
+    }
+
     @media (max-width: 768px) {
         .selector-item {
             font-size: 1.0rem;
@@ -179,6 +185,13 @@
 
         #heading {
             font-size: 2.0rem;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .game-card img {
+            object-fit: contain;
+            max-width: 350px;
         }
     }
 

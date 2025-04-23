@@ -10,6 +10,7 @@ export default class GameComponent extends HTMLElement {
         this.shadow.innerHTML = HTML;
 
         this.addSelectorFunctions();
+        this.addRedirectToCards();
     };
 
     addSelectorFunctions() {
@@ -30,7 +31,6 @@ export default class GameComponent extends HTMLElement {
 
     updateGameCards(targetID) {
         const GameCardArr = Array.from(this.shadow.querySelectorAll(".game-card"));
-        
         GameCardArr.forEach((element) => {
             let attr = element.getAttribute("name");
             if (targetID === "All") {
@@ -42,4 +42,14 @@ export default class GameComponent extends HTMLElement {
             }
         })
     };
+
+    addRedirectToCards() {
+        const linkArr = this.shadow.querySelectorAll(".game-card");
+        linkArr.forEach((element) => {
+            let linkData = element.getAttribute("redirect");
+            element.addEventListener("click", () => {
+                window.open(linkData, "_blank");
+            });
+        })
+    }
 };
