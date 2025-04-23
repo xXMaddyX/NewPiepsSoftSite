@@ -72,6 +72,7 @@ ul {
 #games {
   padding-top: 60px;
   width: 80%;
+  min-height: 700px;
   justify-self: center;
   background-color: rgba(255, 166, 0, 0.600);
 }

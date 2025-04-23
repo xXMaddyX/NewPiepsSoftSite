@@ -2,15 +2,27 @@
     <h1 id="heading">GAMES</h1>
     <div class="game-grid-container">
         <ol class="selector">
-            <li id="html-games" class="selector-item">
-                HTML Games
-                <div class="line"></div>
-            </li>
-            <li id="pixel-games" class="selector-item">Pixel Games</li>
-            <li id="3d-games" class="selector-item">3D Games</li>
+            <li id="All" class="selector-item active">ALL Games</li>
+            <li id="HTML" class="selector-item">HTML Games</li>
+            <li id="Pixel" class="selector-item">Pixel Games</li>
+            <li id="3D" class="selector-item">3D Games</li>
         </ol>
         <div class="grid-elements">
-
+            <div name="HTML" class="game-card active">
+                <h2>Piep´s Deep Dive</h2>
+                <img src="" alt="">
+                <p>Help Pieps in this Sea Adventure. A demo of an WebGL Project of an Exploration Game with our mascot 'Pieps'</p>
+            </div>
+            <div name="Pixel" class="game-card active">
+                <h2>Flaming Trails</h2>
+                <img src="" alt="">
+                <p>Help Ember in this "Flaming" Adventure. Explore a Dark World at the end of Time.</p>
+            </div>
+            <div name="HTML" class="game-card active">
+                <h2>Pumpkin Mayham</h2>
+                <img src="" alt="">
+                <p>A smal Web Based WebGL Shooter, Shot dozens of Pumpins and Gosts. SPOOKYYYY!!!</p>
+            </div>
         </div>
     </div>
 </div>
@@ -44,14 +56,21 @@
         align-items: center;
     }
 
+    .game-grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .selector {
         list-style: none;
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        gap: 30px;
         margin-bottom: 10px;
     }
-
+    
     .selector-item {
         cursor: pointer;
         text-shadow: 
@@ -59,17 +78,108 @@
         -1px -1px 2px white, 
         1px -1px 2px white,
         -1px 1px 2px white;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        transition: all 1s;
+        margin-bottom: 10px;
+    }
+
+    .selector-item::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        margin-top: -3px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 1px 2px rgb(0, 0, 0), 
+        -1px -1px 2px rgb(0, 0, 0), 
+        1px -1px 2px rgb(0, 0, 0),
+        -1px 1px 2px rgb(0, 0, 0);;
         transition: all 1s;
     }
 
-    .selector-item:hover {
+    .selector-item:hover::after,
+    .selector-item.active::after {
+        width: 120px;
+    }
+
+    .selector-item:hover,
+    .selector-item.active {
         color: white;
         text-shadow: 
         1px 1px 2px rgb(0, 0, 0), 
         -1px -1px 2px rgb(0, 0, 0), 
         1px -1px 2px rgb(0, 0, 0),
         -1px 1px 2px rgb(0, 0, 0);
+    }
+
+    .grid-elements {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        gap: 20px;
+        margin-bottom: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .game-card {
+        display: none;
+        min-height: 200px;
+        padding: 10px;
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 1px 1px 2px rgb(0, 0, 0), 
+        -1px -1px 2px rgb(0, 0, 0), 
+        1px -1px 2px rgb(0, 0, 0),
+        -1px 1px 2px rgb(0, 0, 0);
+        cursor: pointer;
+        animation: fadeIn 1s ease-in;
+        transition: all 0.5s;
+    }
+
+    .game-card:hover {
+        box-shadow: 5px 5px 10px black;
+        border: 1px solid rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+
+    .game-card.active {
+        display: flex;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        } to {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .selector-item {
+            font-size: 1.0rem;
+        }
+
+        .selector-item:hover::after {
+            width: 90px;
+        }
+
+        .selector-item.active::after {
+            width: 90px;
+        }
+
+        .grid-elements {
+            grid-template-columns: 1fr;
+        }
+
+        #heading {
+            font-size: 2.0rem;
+        }
     }
 
 </style>

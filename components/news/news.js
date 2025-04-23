@@ -15,7 +15,6 @@ export default class NewsComponent extends HTMLElement {
         this.wrapper = this.shadow.querySelector(".wrapper");
 
         NewsData.forEach(({heading, text, buttonLink, linkName}) => {
-            console.log(heading)
             const NewsContainer = document.createElement("div");
             NewsContainer.classList.add("news-container");
 
