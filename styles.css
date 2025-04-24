@@ -65,12 +65,14 @@ ul {
 
 #news {
   padding-top: 60px;
+  padding-bottom: 60px;
   width: 80%;
   justify-self: center;
 }
 
 #games {
   padding-top: 60px;
+  padding-bottom: 60px;
   width: 80%;
   min-height: 700px;
   justify-self: center;
@@ -79,9 +81,18 @@ ul {
 
 #teams {
   padding-top: 60px;
+  padding-bottom: 60px;
   width: 80%;
   justify-self: center;
   background-color: #000000;
+}
+
+#contact {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  width: 80%;
+  justify-self: center;
+  background-color: rgba(255, 166, 0, 0.600);
 }
 
 #pieps-logo {
@@ -191,6 +202,12 @@ header .container {
   }
 
   /* Footer */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
   footer {
     display: flex;
     justify-self: center;
@@ -199,10 +216,10 @@ header .container {
     color: var(--text-color);
     padding: 60px 0 20px;
     position: relative;
-    width: 80%;
+    width: 100%;
     border-top: 1px solid rgb(0, 0, 0);
   }
-  
+
   footer .grid-bg {
     opacity: 0.1;
   }
@@ -211,7 +228,6 @@ header .container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
-    position: relative;
     z-index: 1;
   }
   
@@ -289,6 +305,12 @@ header .container {
       box-shadow: -5px 0 15px var(--shadow-color);
       z-index: 1000;
     }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
     
     .nav-links.active {
       right: 0;
@@ -305,6 +327,10 @@ header .container {
     #games {
       width: 100%;
     }
+
+    #contact {
+      width: 100%;
+    }
   }
 
   @media (max-width: 1300px) {
@@ -317,6 +343,10 @@ header .container {
     }
 
     #games {
+      width: 100%;
+    }
+
+    #contact {
       width: 100%;
     }
   }

@@ -3,6 +3,7 @@ import AboutSection from "./components/about/about.js";
 import NewsComponent from "./components/news/news.js";
 import GameComponent from "./components/games/games.js";
 import TeamComponent from "./components/team/team.js";
+import ContactComponent from "./components/contact/contact.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   //-------------------------->>>>DEFINE_WEB_COMPONETS<<<<---------------------
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   customElements.define("news-element", NewsComponent);
   customElements.define("game-element", GameComponent);
   customElements.define("team-element", TeamComponent);
+  customElements.define("contact-element", ContactComponent);
   //---------------------------------------------------------------------------
 
   //------------------------->>>>ELEMENT_SELECTORS<<<<-------------------------
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const NewsSection = document.querySelector("#news");
   const GameSection = document.querySelector("#games");
   const TeamSection = document.querySelector("#teams");
+  const ContactSection = document.querySelector("#contact");
   //---------------------------------------------------------------------------
 
   const CarousellElement = document.createElement("carousell-element");
@@ -35,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const TeamSectionElem = document.createElement("team-element");
   TeamSection.append(TeamSectionElem);
+
+  const ContactSectionElem = document.createElement("contact-element");
+  ContactSection.append(ContactSectionElem);
 
   //-------------------------->>>>NAVIGATION<<<<-------------------------------
   // Mobile menu toggle
