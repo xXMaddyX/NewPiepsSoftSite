@@ -167,16 +167,23 @@
     }
 
     @media (max-width: 768px) {
+        .selector {
+            gap: 10px;
+        }
         .selector-item {
-            font-size: 1.0rem;
+            font-size: 0.9rem;
+        }
+
+        .selector-item::after {
+            margin-top: 0px;
         }
 
         .selector-item:hover::after {
-            width: 90px;
+            width: 70px;
         }
 
         .selector-item.active::after {
-            width: 90px;
+            width: 70px;
         }
 
         .grid-elements {
@@ -188,7 +195,7 @@
         }
     }
 
-    @media (max-width: 1300px) {
+    @media (max-width: 1630px) {
         .game-card img {
             object-fit: contain;
             max-width: 350px;
