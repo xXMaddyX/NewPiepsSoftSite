@@ -281,7 +281,7 @@ header .container {
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     .mobile-menu-toggle {
       display: block;
       margin-right: 10px;
