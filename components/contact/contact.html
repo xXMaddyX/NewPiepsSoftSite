@@ -1,5 +1,29 @@
 <div id="container">
     <h1 id="heading">Contact</h1>
+    <div class="contact-content">
+        <div class="icons">
+            <img src="img/icons/anruf.png" alt="">
+            <div class="icon-text-box">
+                <h1>Phone</h1>
+                <h3>+49 151 40741961</h3>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="img/icons/briefumschlag.png" alt="">
+            <div class="icon-text-box">
+                <h1>Mail</h1>
+                <h3>info@piepssoft.de</h3>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="img/icons/haus.png" alt="">
+            <div class="icon-text-box">
+                <h1>Location</h1>
+                <h3>Mainz, Germany</h3>
+            </div>
+        </div>
+    </div>
+    <a id="sendMail" href="mailto:info@piepssoft.de">E-Mail senden</a>
 </div>
 <style>
     @font-face {
@@ -12,6 +36,15 @@
         margin: 0px;
         box-sizing: border-box;
         font-family: piepsi;
+    }
+
+    img {
+        max-width: 50px;
+        max-height: 50px;
+        filter: drop-shadow(1px 1px 1px white)
+        drop-shadow(-1px -1px 1px white)
+        drop-shadow(1px -1px 1px white)
+        drop-shadow(-1px 1px 1px white);
     }
 
     #heading {
@@ -29,5 +62,60 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        place-self: center;
+        width: 80%;
+    }
+
+    .contact-content {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .icon-text-box {
+        display: flex;
+        flex-direction: column;
+        text-shadow: 
+        1px 1px 2px white, 
+        -1px -1px 2px white, 
+        1px -1px 2px white,
+        -1px 1px 2px white;
+    }
+
+    #sendMail {
+        all: unset;
+        cursor: pointer;
+        margin-top: 60px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        transition: all 0.5s;
+    }
+
+    #sendMail:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(0, 0, 0);
+        box-shadow: 2px 2px 5px black;
+    }
+
+    @media (max-width: 768px) {
+        #heading {
+            font-size: 2.0rem;
+        }
+
+        .contact-content {
+            flex-direction: column;
+        }
     }
 </style>
